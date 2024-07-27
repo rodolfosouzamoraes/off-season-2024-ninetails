@@ -117,7 +117,6 @@ public class RobotContainer {
 
   private void configureBindings() {
     initializeIntakeXboxController();
-    initializeArmXboxController();
     initializeArmToPositionXboxController();
   }
 
@@ -130,11 +129,6 @@ public class RobotContainer {
 
     JoystickButton collectNote = new JoystickButton(m_armIntakeXbox,Button.kRightBumper.value);
     collectNote.whileTrue(new IntakeCollectCmd(m_intakeSubsystem));
-  }
-
-  private void initializeArmXboxController() {
-    //JoystickButton armMoveUp = new JoystickButton(_armIntakeXbox,Button.kX.value);
-    //armMoveUp.whileTrue(new ArmMoveManualUpCmd(_armSubsystem));
   }
 
   private void initializeArmToPositionXboxController() {
